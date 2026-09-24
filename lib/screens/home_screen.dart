@@ -78,10 +78,7 @@ class _ProductCard extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {
-                      context.read<CartProviderCompat>();
-                      context.read<dynamic>();
-                    },
+                    onPressed: () => context.read<CartProviderCompatFix>(context),
                     child: const Text('Add to cart'),
                   ),
                 ),
